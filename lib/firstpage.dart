@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Firstpage extends StatelessWidget{
   Widget build(context){
     return Container(
-     padding: EdgeInsets.all(20.0),
+     padding: EdgeInsets.all(40.0),
         child: Center(
           child: Column(
           children:[
@@ -15,12 +15,13 @@ class Firstpage extends StatelessWidget{
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            SizedBox(height: 200.0,),
           RaisedButton(
-          child: Text('Login'),
+          child: Text('Login',  style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.pink)),
           onPressed: (){},
         ),
         RaisedButton(
-          child: Text('Register'),
+          child: Text('Register', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.pink)),
           onPressed: (){},),
           ]) ])
         ),
