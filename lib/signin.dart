@@ -5,6 +5,7 @@ class Signin extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             body: Container(
+              color: Colors.pinkAccent,
                 child: Form(
                     child: SingleChildScrollView(
       child: Column(children: [
@@ -43,7 +44,7 @@ class Signin extends StatelessWidget {
 
   Widget submit() {
     return RaisedButton(
-        child: Text('Register'),
+        child: Text('Login'),
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
