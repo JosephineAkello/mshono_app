@@ -72,11 +72,11 @@ class SignupState extends State<Signup> {
 
   Widget submitButton() {
     return RaisedButton(
-      child: Text('Register'),
-      color: Colors.pink[200],
-      padding: EdgeInsets.symmetric(vertical: 20.0),
+        child: Text('Register'),
+      color: Colors.pink,
+      padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       onPressed: () {},
-    );
+     );
   }
 }
