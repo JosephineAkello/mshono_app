@@ -17,7 +17,9 @@ class Firstpage extends StatelessWidget {
           backgroundColor: Colors.white,
           radius: 100.0,
         ),
-        Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+        Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
+        children: [
           SizedBox(
             height: 200.0,
           ),
