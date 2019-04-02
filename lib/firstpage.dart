@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'signup.dart';
 
 class Firstpage extends StatelessWidget {
   Widget build(context) {
@@ -25,7 +26,9 @@ class Firstpage extends StatelessWidget {
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.pink)),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+            },
           ),
           RaisedButton(
             child: Text('Register',
