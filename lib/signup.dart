@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
 import 'signin.dart';
 import 'mixins/auth_mixins.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Signup extends StatefulWidget {
   Signup({this.auth});
@@ -165,7 +166,12 @@ class SignupState extends State<Signup> with ValidationMixin {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => Signin()));
         });
-      } catch (e) {}
+      } catch (e) {
+        Fluttertoast.showToast(
+            msg: e.message, backgroundColor: Colors.pinkAccent, toastLength: Toast.LENGTH_LONG);
+      }
+        
+      }
     }
   }
-}
+
