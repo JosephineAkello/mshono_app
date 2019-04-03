@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'mixins/validationMixins.dart';
 
 class Signin extends StatefulWidget {
   createState() {
@@ -6,7 +7,7 @@ class Signin extends StatefulWidget {
   }
 }
 
-class SigninState extends State<Signin> {
+class SigninState extends State<Signin> with ValidationMixin {
   final formKey = GlobalKey<FormState>();
 
   Widget build(context) {
@@ -42,6 +43,7 @@ class SigninState extends State<Signin> {
         hintText: 'josephine',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
+      validator: validateName,
     );
   }
 
