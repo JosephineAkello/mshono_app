@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'mixins/validationMixins.dart';
 
 class Signup extends StatefulWidget {
   createState() {
@@ -6,7 +7,7 @@ class Signup extends StatefulWidget {
   }
 }
 
-class SignupState extends State<Signup> {
+class SignupState extends State<Signup> with ValidationMixin{
 final formKey= GlobalKey<FormState>();
 
 String name= '';
