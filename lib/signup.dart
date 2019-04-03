@@ -139,7 +139,7 @@ class SignupState extends State<Signup> with ValidationMixin {
 
   Widget submitButton() {
     return RaisedButton(
-      child: Text('Register'),
+      child: Text('Register',style: TextStyle(color: Colors.white, fontSize: 20),),
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
