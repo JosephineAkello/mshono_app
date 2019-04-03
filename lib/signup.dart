@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
 import 'home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Signup extends StatefulWidget {
   createState() {
@@ -8,14 +9,14 @@ class Signup extends StatefulWidget {
   }
 }
 
-class SignupState extends State<Signup> with ValidationMixin{
-final formKey= GlobalKey<FormState>();
+class SignupState extends State<Signup> with ValidationMixin {
+  final formKey = GlobalKey<FormState>();
 
-String name= '';
-String phoneNo='';
-String email='';
-String pass='';
-String confirmpass='';
+  String name = '';
+  String phoneNo = '';
+  String email = '';
+  String pass = '';
+  String confirmpass = '';
 
   Widget build(context) {
     return MaterialApp(
@@ -24,35 +25,35 @@ String confirmpass='';
       home: Scaffold(
           body: Container(
               child: Form(
-                key: formKey,
+                  key: formKey,
                   child: SingleChildScrollView(
-        child: Column(children: [
-          SizedBox(
-            height: 50.0,
-          ),
-          username(),
-          SizedBox(
-            height: 20.0,
-          ),
-          phone(),
-          SizedBox(
-            height: 20.0,
-          ),
-          emailAddress(),
-          SizedBox(
-            height: 20.0,
-          ),
-          password(),
-          SizedBox(
-            height: 20.0,
-          ),
-          confirmpassword(),
-          SizedBox(
-            height: 20.0,
-          ),
-          submitButton(),
-        ]),
-      )))),
+                    child: Column(children: [
+                      SizedBox(
+                        height: 50.0,
+                      ),
+                      username(),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      phone(),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      emailAddress(),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      password(),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      confirmpassword(),
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      submitButton(),
+                    ]),
+                  )))),
     );
   }
 
@@ -64,14 +65,14 @@ String confirmpass='';
         hintText: 'josephine',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
- validator: validateName,
-  onSaved: (String username){
-    name= username;
-  },
+      validator: validateName,
+      onSaved: (String username) {
+        name = username;
+      },
     );
   }
 
-Widget phone() {
+  Widget phone() {
     return TextFormField(
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
@@ -79,10 +80,10 @@ Widget phone() {
         hintText: '0712345678',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
- validator: validatePhone,
- onSaved: (String phone){
-   phoneNo= phone;
- },
+      validator: validatePhone,
+      onSaved: (String phone) {
+        phoneNo = phone;
+      },
     );
   }
 
@@ -95,10 +96,10 @@ Widget phone() {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30.0),
           )),
-          validator: validateEmail,
-          onSaved: (String emailAddress){
-            email= emailAddress;
-          },
+      validator: validateEmail,
+      onSaved: (String emailAddress) {
+        email = emailAddress;
+      },
     );
   }
 
@@ -110,13 +111,14 @@ Widget phone() {
           hintText: '123456',
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
-    validator: validatePass,
-    onSaved: (String password){
-      pass = password;
-    },
+      validator: validatePass,
+      onSaved: (String password) {
+        pass = password;
+      },
     );
   }
-   Widget confirmpassword() {
+
+  Widget confirmpassword() {
     return TextFormField(
       obscureText: true,
       decoration: InputDecoration(
@@ -124,37 +126,44 @@ Widget phone() {
           hintText: '123456',
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
-   validator: validateConfirmPass,
-   onSaved: (String confirmPassword){
-   confirmpass = confirmPassword;
-   },
+      validator: validateConfirmPass,
+      onSaved: (String confirmPassword) {
+        confirmpass = confirmPassword;
+      },
     );
   }
 
   Widget submitButton() {
     return RaisedButton(
-        child: Text('Register'),
+      child: Text('Register'),
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       onPressed: validateAndSubmit,
-      
-     );
+    );
   }
 
-  bool validateSave(){
-    final form= formKey.currentState;
-    if(form.validate()){
+  bool validateSave() {
+    final form = formKey.currentState;
+    if (form.validate()) {
       form.save();
       return true;
     }
     return false;
   }
 
-validateAndSubmit(){
-  if(validateSave()){
- Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+  validateAndSubmit() async{
+    if (validateSave()) {
+      try{
+        await widget.auth.createUserWithEmailAndPassword(email, pass)
+        .then((userId)){
+      Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => HomePage()));
+        };
   }
-}
+  catch(e){
 
+  }
+  }}
 }
