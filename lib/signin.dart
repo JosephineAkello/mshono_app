@@ -10,6 +10,10 @@ class Signin extends StatefulWidget {
 class SigninState extends State<Signin> with ValidationMixin {
   final formKey = GlobalKey<FormState>();
 
+String name='';
+String emailaddress='';
+String pass= '';
+
   Widget build(context) {
     return MaterialApp(
         theme: ThemeData(primaryColor: Colors.pink),
@@ -44,6 +48,9 @@ class SigninState extends State<Signin> with ValidationMixin {
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
       validator: validateName,
+      onSaved: (String name){
+    name= name;
+      },
     );
   }
 
@@ -55,6 +62,10 @@ class SigninState extends State<Signin> with ValidationMixin {
         hintText: 'jos@gmail.com',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
+      validator: validateEmail,
+      onSaved: (String email){
+    emailaddress= email;
+      },
     );
   }
 
@@ -65,6 +76,10 @@ class SigninState extends State<Signin> with ValidationMixin {
         hintText: '123456',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
+      validator: validatePass,
+      onSaved: (String password){
+        pass= password;
+      },
     );
   }
 
