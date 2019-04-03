@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
 import 'home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class Signin extends StatefulWidget {
   createState() {
@@ -91,7 +92,10 @@ class SigninState extends State<Signin> with ValidationMixin {
 
   Widget submit() {
     return RaisedButton(
-      child: Text('Login', style: TextStyle(color: Colors.white, fontSize: 20),),
+      child: Text(
+        'Login',
+        style: TextStyle(color: Colors.white, fontSize: 20),
+      ),
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
@@ -117,7 +121,12 @@ class SigninState extends State<Signin> with ValidationMixin {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => HomePage()));
         });
-      } catch (e) {}
+      } catch (e) {
+        Fluttertoast.showToast(
+            msg: e.message,
+            backgroundColor: Colors.pinkAccent,
+            toastLength: Toast.LENGTH_LONG);
+      }
     }
   }
 }
