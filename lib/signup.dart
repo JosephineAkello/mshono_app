@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
+import 'home.dart';
 
 class Signup extends StatefulWidget {
   createState() {
@@ -121,7 +122,9 @@ Widget phone() {
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+      },
      );
   }
 }
