@@ -7,6 +7,7 @@ class Firstpage extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(40.0),
       child: Center(
+        child: SingleChildScrollView(
           child: Column(children: [
         CircleAvatar(
           child: Text('E-tailor',
@@ -45,6 +46,6 @@ class Firstpage extends StatelessWidget {
           ),
         ])
       ])),
-    );
+     ));
   }
 }
