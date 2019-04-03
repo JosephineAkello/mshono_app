@@ -63,7 +63,7 @@ String confirmpass='';
         hintText: 'josephine',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
-
+ validator: validateName,
     );
   }
 
@@ -75,7 +75,7 @@ Widget phone() {
         hintText: '0712345678',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
-
+ validator: validatePhone,
     );
   }
 
@@ -88,6 +88,7 @@ Widget phone() {
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30.0),
           )),
+          validator: validateEmail,
     );
   }
 
@@ -99,6 +100,7 @@ Widget phone() {
           hintText: '123456',
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
+    validator: validatePass,
     );
   }
    Widget confirmpassword() {
@@ -109,6 +111,7 @@ Widget phone() {
           hintText: '123456',
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
+   validator: validateConfirmPass,
     );
   }
 
