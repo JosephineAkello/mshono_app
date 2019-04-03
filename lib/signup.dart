@@ -10,8 +10,10 @@ class SignupState extends State<Signup> {
 final formKey= GlobalKey<FormState>();
 
 String name= '';
+String phoneNo='';
 String email='';
-
+String pass='';
+String confirmpass='';
 
   Widget build(context) {
     return MaterialApp(
@@ -30,11 +32,19 @@ String email='';
           SizedBox(
             height: 20.0,
           ),
+          phone(),
+          SizedBox(
+            height: 20.0,
+          ),
           emailAddress(),
           SizedBox(
             height: 20.0,
           ),
           password(),
+          SizedBox(
+            height: 20.0,
+          ),
+          confirmpassword(),
           SizedBox(
             height: 20.0,
           ),
@@ -56,11 +66,23 @@ String email='';
     );
   }
 
+Widget phone() {
+    return TextFormField(
+      keyboardType: TextInputType.text,
+      decoration: InputDecoration(
+        labelText: 'phone',
+        hintText: '0712345678',
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
+      ),
+
+    );
+  }
+
   Widget emailAddress() {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
-          labelText: 'emailaddress',
+          labelText: 'emailAddress',
           hintText: 'jos@gmail.com',
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30.0),
@@ -70,8 +92,19 @@ String email='';
 
   Widget password() {
     return TextFormField(
+      obscureText: true,
       decoration: InputDecoration(
           labelText: 'password',
+          hintText: '123456',
+          border:
+              OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
+    );
+  }
+   Widget confirmpassword() {
+    return TextFormField(
+      obscureText: true,
+      decoration: InputDecoration(
+          labelText: 'Confirm password',
           hintText: '123456',
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
