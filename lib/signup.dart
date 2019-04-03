@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
-import 'home.dart';
+import 'signin.dart';
 import 'mixins/auth_mixins.dart';
 
 class Signup extends StatefulWidget {
@@ -156,18 +156,16 @@ class SignupState extends State<Signup> with ValidationMixin {
     return false;
   }
 
-  validateAndSubmit() async{
+  validateAndSubmit() async {
     if (validateSave()) {
-      try{
-        await widget.auth.createUserWithEmailAndPassword(email, pass)
-        .then((userId){
-      Navigator.push(
-          context, 
-          MaterialPageRoute(builder: (context) => HomePage()));
+      try {
+        await widget.auth
+            .createUserWithEmailAndPassword(email, pass)
+            .then((userId) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => Signin()));
         });
+      } catch (e) {}
+    }
   }
-  catch(e){
-
-  }
-  }}
 }
