@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class Signin extends StatelessWidget {
   Widget build(context) {
     return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.pink),
         home: Scaffold(
             body: Container(
-              color: Colors.pinkAccent,
                 child: Form(
                     child: SingleChildScrollView(
       child: Column(children: [
@@ -13,7 +13,14 @@ class Signin extends StatelessWidget {
           height: 50.0,
         ),
         username(),
+        SizedBox(
+            height: 20.0,
+          ),
         password(),
+        SizedBox(
+            height: 20.0,
+          ),
+          submit(),
       ]),
     )))));
   }
