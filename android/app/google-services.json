@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "48459100049",
+    "firebase_url": "https://mshonoapp.firebaseio.com",
+    "project_id": "mshonoapp",
+    "storage_bucket": "mshonoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48459100049:android:c1d7ca9d56757029",
+        "android_client_info": {
+          "package_name": "com.example.mshono_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48459100049-k4cf1etnjtkeh3cono5i2rqih90nvm83.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mshono_app",
+            "certificate_hash": "d8e72aaa89af1c2cd96df1b4ed4c1a7f5adfb04b"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMde2tVaHnuS60vmOAEYh6Y3Ucr9vrTrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48459100049-213169oh54jdc3bosg0kel9ob3k7d1ju.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
