@@ -12,37 +12,37 @@ class Signin extends StatefulWidget {
 class SigninState extends State<Signin> with ValidationMixin {
   final formKey = GlobalKey<FormState>();
 
-String name='';
-String emailaddress='';
-String pass= '';
+  String name = '';
+  String emailaddress = '';
+  String pass = '';
 
   Widget build(context) {
     return MaterialApp(
         theme: ThemeData(primaryColor: Colors.pink),
         home: Scaffold(
-        body: Container(
-          child: Form(
-            key: formKey,
-          child: SingleChildScrollView(
-          child: Column(children: [
-            SizedBox(
-              height: 50.0,
-            ),
-            username(),
-            SizedBox(
-              height: 20.0,
-            ),
-            email(),
-            SizedBox(
-              height: 20.0,
-            ),
-            password(),
-            SizedBox(
-              height: 20.0,
-            ),
-            submit(),
-          ]),
-        )))));
+            body: Container(
+                child: Form(
+                    key: formKey,
+                    child: SingleChildScrollView(
+                      child: Column(children: [
+                        SizedBox(
+                          height: 50.0,
+                        ),
+                        username(),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        email(),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        password(),
+                        SizedBox(
+                          height: 20.0,
+                        ),
+                        submit(),
+                      ]),
+                    )))));
   }
 
   Widget username() {
@@ -54,8 +54,8 @@ String pass= '';
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
       validator: validateName,
-      onSaved: (String name){
-    name= name;
+      onSaved: (String name) {
+        name = name;
       },
     );
   }
@@ -69,8 +69,8 @@ String pass= '';
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
       validator: validateEmail,
-      onSaved: (String email){
-    emailaddress= email;
+      onSaved: (String email) {
+        emailaddress = email;
       },
     );
   }
@@ -83,15 +83,15 @@ String pass= '';
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
       validator: validatePass,
-      onSaved: (String password){
-        pass= password;
+      onSaved: (String password) {
+        pass = password;
       },
     );
   }
 
   Widget submit() {
     return RaisedButton(
-      child: Text('Login'),
+      child: Text('Login', style: TextStyle(color: Colors.white, fontSize: 20),),
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
@@ -99,7 +99,7 @@ String pass= '';
     );
   }
 
-   bool validateSave() {
+  bool validateSave() {
     final form = formKey.currentState;
     if (form.validate()) {
       form.save();
