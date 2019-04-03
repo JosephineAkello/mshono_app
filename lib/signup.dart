@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
 import 'home.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'mixins/auth_mixins.dart';
 
 class Signup extends StatefulWidget {
   Signup({this.auth});
 
   final BaseAuth auth;
-  
+
   createState() {
     return SignupState();
   }
@@ -161,11 +160,11 @@ class SignupState extends State<Signup> with ValidationMixin {
     if (validateSave()) {
       try{
         await widget.auth.createUserWithEmailAndPassword(email, pass)
-        .then((userId)){
+        .then((userId){
       Navigator.push(
           context, 
           MaterialPageRoute(builder: (context) => HomePage()));
-        };
+        });
   }
   catch(e){
 
