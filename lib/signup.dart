@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
 import 'home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'mixins/auth_mixins.dart';
 
 class Signup extends StatefulWidget {
+  Signup({this.auth});
+
+  final BaseAuth auth;
+  
   createState() {
     return SignupState();
   }
