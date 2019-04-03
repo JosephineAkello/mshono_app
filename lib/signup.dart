@@ -65,6 +65,9 @@ String confirmpass='';
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
  validator: validateName,
+  onSaved: (String username){
+    name= username;
+  },
     );
   }
 
@@ -77,6 +80,9 @@ Widget phone() {
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
  validator: validatePhone,
+ onSaved: (String phone){
+   phoneNo= phone;
+ },
     );
   }
 
@@ -90,6 +96,9 @@ Widget phone() {
             borderRadius: BorderRadius.circular(30.0),
           )),
           validator: validateEmail,
+          onSaved: (String emailAddress){
+            email= emailAddress;
+          },
     );
   }
 
@@ -102,6 +111,9 @@ Widget phone() {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
     validator: validatePass,
+    onSaved: (String password){
+      pass = password;
+    },
     );
   }
    Widget confirmpassword() {
@@ -113,6 +125,9 @@ Widget phone() {
           border:
               OutlineInputBorder(borderRadius: BorderRadius.circular(30.0))),
    validator: validateConfirmPass,
+   onSaved: (String confirmPassword){
+   confirmpass = confirmPassword;
+   },
     );
   }
 
