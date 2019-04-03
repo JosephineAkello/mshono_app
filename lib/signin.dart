@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
+import 'home.dart';
 
 class Signin extends StatefulWidget {
   createState() {
@@ -27,6 +28,10 @@ String pass= '';
               height: 50.0,
             ),
             username(),
+            SizedBox(
+              height: 20.0,
+            ),
+            email(),
             SizedBox(
               height: 20.0,
             ),
@@ -91,5 +96,27 @@ String pass= '';
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       onPressed: () {},
     );
+  }
+
+   bool validateSave() {
+    final form = formKey.currentState;
+    if (form.validate()) {
+      form.save();
+      return true;
+    }
+    return false;
+  }
+
+  validateAndSubmit() async {
+    if (validateSave()) {
+      try {
+        await widget.auth
+            .signInUserWithEmailAndPassword(email, pass)
+            .then((userId) {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
+        });
+      } catch (e) {}
+    }
   }
 }
