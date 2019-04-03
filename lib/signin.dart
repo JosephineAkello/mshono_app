@@ -92,7 +92,10 @@ class SigninState extends State<Signin> with ValidationMixin {
 
   Widget submit() {
     return RaisedButton(
-      child: Text('Login', style: TextStyle(color: Colors.white, fontSize: 20),),
+      child: Text(
+        'Login',
+        style: TextStyle(color: Colors.white, fontSize: 20),
+      ),
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
@@ -120,9 +123,10 @@ class SigninState extends State<Signin> with ValidationMixin {
         });
       } catch (e) {
         Fluttertoast.showToast(
-            msg: e.message, backgroundColor: Colors.pinkAccent, toastLength: Toast.LENGTH_LONG);
+            msg: e.message,
+            backgroundColor: Colors.pinkAccent,
+            toastLength: Toast.LENGTH_LONG);
       }
-      
     }
   }
 }
