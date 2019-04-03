@@ -28,6 +28,9 @@ class SignupState extends State<Signup> with ValidationMixin {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.pink),
       home: Scaffold(
+          appBar: AppBar(
+            title: Text('Register'),
+          ),
           body: Container(
               child: Form(
                   key: formKey,
