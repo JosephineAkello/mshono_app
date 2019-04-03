@@ -38,7 +38,7 @@ class SignupState extends State<Signup> {
   }
 
   Widget username() {
-    return TextField(
+    return TextFormField(
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
         labelText: 'username',
@@ -49,7 +49,7 @@ class SignupState extends State<Signup> {
   }
 
   Widget emailAddress() {
-    return TextField(
+    return TextFormField(
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
           labelText: 'emailaddress',
@@ -61,7 +61,7 @@ class SignupState extends State<Signup> {
   }
 
   Widget password() {
-    return TextField(
+    return TextFormField(
       decoration: InputDecoration(
           labelText: 'password',
           hintText: '123456',
