@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'mixins/validationMixins.dart';
 import 'home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Signin extends StatefulWidget {
   createState() {
@@ -110,8 +111,8 @@ String pass= '';
   validateAndSubmit() async {
     if (validateSave()) {
       try {
-        await widget.auth
-            .signInUserWithEmailAndPassword(email, pass)
+        await FirebaseAuth.instance
+            .signInWithEmailAndPassword(email: emailaddress, password: pass)
             .then((userId) {
           Navigator.push(
               context, MaterialPageRoute(builder: (context) => HomePage()));
