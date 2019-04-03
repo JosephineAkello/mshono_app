@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Signin extends StatelessWidget {
+class Signin extends StatefulWidget {
+createState(){
+  return SigninState();
+}
+}
+
+class SigninState extends State<Signin>{
+
   Widget build(context) {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.pink),
