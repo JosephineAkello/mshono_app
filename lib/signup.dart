@@ -7,6 +7,12 @@ class Signup extends StatefulWidget {
 }
 
 class SignupState extends State<Signup> {
+final formKey= GlobalKey<FormState>();
+
+String name= '';
+String email='';
+
+
   Widget build(context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -14,6 +20,7 @@ class SignupState extends State<Signup> {
       home: Scaffold(
           body: Container(
               child: Form(
+                key: formKey,
                   child: SingleChildScrollView(
         child: Column(children: [
           SizedBox(
@@ -45,6 +52,7 @@ class SignupState extends State<Signup> {
         hintText: 'josephine',
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
       ),
+
     );
   }
 
