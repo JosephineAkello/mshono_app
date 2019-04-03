@@ -137,9 +137,24 @@ Widget phone() {
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-      onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
-      },
+      onPressed: validateAndSubmit,
+      
      );
   }
+
+  bool validateSave(){
+    final form= formKey.currentState;
+    if(form.validate()){
+      form.save();
+      return true;
+    }
+    return false;
+  }
+
+validateAndSubmit(){
+  if(validateSave()){
+ Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+  }
+}
+
 }
