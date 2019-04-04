@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget{
+class HomePage extends StatefulWidget{
+ createState(){
+   return HomePageState();
+ }
+}
+
+class HomePageState extends State<HomePage>{
+
   Widget build(conetxt){
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.pink),
@@ -28,22 +35,27 @@ class HomePage extends StatelessWidget{
                 ListTile(
                   title: Text('Designs'),
                   leading: Icon(Icons.filter_vintage),
+                  onTap: (){},
                 ),
                 ListTile(
                   title: Text('Fabric'),
                   leading: Icon(Icons.flare),
+                  onTap: (){},
                 ),
                 ListTile(
                   title: Text('My Orders'),
                   leading: Icon(Icons.gavel),
+                  onTap: (){},
                 ),
                 ListTile(
                   title: Text('Measurements'),
                   leading: Icon(Icons.book),
+                  onTap: (){},
                 ),
                 ListTile(
                   title: Text('Payments'),
                   leading: Icon(Icons.attach_money),
+                  onTap: (){},
                 )
               
             ],
