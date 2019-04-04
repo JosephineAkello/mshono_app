@@ -14,7 +14,7 @@ class HomePageState extends State<HomePage>{
       theme: ThemeData(primaryColor: Colors.pink),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Home Page'),
+          title: Text('Designs'),
         ),
         drawer: Drawer(
           child: ListView(
