@@ -25,6 +25,26 @@ class HomePage extends StatelessWidget{
                  color: Colors.pink
                ),
                 ),
+                ListTile(
+                  title: Text('Designs'),
+                  leading: Icon(Icons.filter_vintage),
+                ),
+                ListTile(
+                  title: Text('Fabric'),
+                  leading: Icon(Icons.flare),
+                ),
+                ListTile(
+                  title: Text('My Orders'),
+                  leading: Icon(Icons.gavel),
+                ),
+                ListTile(
+                  title: Text('Measurements'),
+                  leading: Icon(Icons.book),
+                ),
+                ListTile(
+                  title: Text('Payments'),
+                  leading: Icon(Icons.attach_money),
+                )
               
             ],
           ),
