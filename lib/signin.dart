@@ -21,6 +21,9 @@ class SigninState extends State<Signin> with ValidationMixin {
     return MaterialApp(
         theme: ThemeData(primaryColor: Colors.pink),
         home: Scaffold(
+          appBar: AppBar(
+            title: Text('Login'),
+          ),
             body: Container(
                 child: Form(
                     key: formKey,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'signup.dart';
 import 'signin.dart';
+import 'mixins/auth_mixins.dart';
 
 class Firstpage extends StatelessWidget {
   Widget build(context) {
@@ -41,7 +42,7 @@ class Firstpage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.pink)),
             onPressed: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup(auth: Auth())));
             },
           ),
         ])
