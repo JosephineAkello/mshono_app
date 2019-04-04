@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'fragments/fabric.dart';
 
 class HomePage extends StatefulWidget{
  createState(){
@@ -35,27 +36,37 @@ class HomePageState extends State<HomePage>{
                 ListTile(
                   title: Text('Designs'),
                   leading: Icon(Icons.filter_vintage),
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                  },
                 ),
                 ListTile(
                   title: Text('Fabric'),
                   leading: Icon(Icons.flare),
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Fabric()));
+                  },
                 ),
                 ListTile(
                   title: Text('My Orders'),
                   leading: Icon(Icons.gavel),
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Fabric()));
+                  },
                 ),
                 ListTile(
                   title: Text('Measurements'),
                   leading: Icon(Icons.book),
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Fabric()));
+                  },
                 ),
                 ListTile(
                   title: Text('Payments'),
                   leading: Icon(Icons.attach_money),
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Fabric()));
+                  },
                 )
               
             ],
