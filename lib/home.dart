@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget{
   Widget build(conetxt){
     return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.pink),
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Home Page'),
+        ),
         drawer: Drawer(
           child: ListView(
             children: <Widget>[
