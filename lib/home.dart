@@ -3,6 +3,7 @@ import 'fragments/fabric.dart';
 import 'fragments/measurements.dart';
 import 'fragments/orders.dart';
 import 'fragments/payments.dart';
+import 'fragments/designs.dart';
 
 
 class HomePage extends StatefulWidget{
@@ -76,7 +77,7 @@ class HomePageState extends State<HomePage>{
             ],
           ),
         ),
-        body: Text('home page'),
+        body: Designs(),
       ),
     );
   }
