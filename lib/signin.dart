@@ -128,6 +128,30 @@ class SigninState extends State<Signin> with ValidationMixin {
     );
   }
 
+ final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  final GoogleSignIn googleSignIn = GoogleSignIn();
+  gSignIn() async {
+    try {
+      GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+      GoogleSignInAuthentication authentication =
+          await googleSignInAccount.authentication;
+      await firebaseAuth
+          .signInWithGoogle(
+              accessToken: authentication.accessToken,
+              idToken: authentication.idToken)
+          .then((userId) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
+      });
+    } catch (e) {
+      print(e);
+      Fluttertoast.showToast(
+          msg: e.message, backgroundColor: Colors.pinkAccent, toastLength: Toast.LENGTH_LONG);
+    }
+  }
+
   bool validateSave() {
     final form = formKey.currentState;
     if (form.validate()) {
