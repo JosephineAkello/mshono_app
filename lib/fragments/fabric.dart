@@ -4,6 +4,9 @@ class Fabric extends StatelessWidget{
   Widget build(context){
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Fabric'),
+        ),
         body: GridView.count(
           crossAxisCount: 2,
           children: <Widget>[
