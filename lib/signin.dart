@@ -45,7 +45,15 @@ class SigninState extends State<Signin> with ValidationMixin {
                         SizedBox(
                           height: 20.0,
                         ),
+                        Row(
+                        mainAxisAlignment :MainAxisAlignment.spaceEvenly,
+                        children: [
                         submit(),
+                         SizedBox(
+                          height: 20.0,
+                        ),
+                        googlesignin(),
+                        ])
                       ]),
                     )))));
   }
@@ -98,6 +106,19 @@ class SigninState extends State<Signin> with ValidationMixin {
     return RaisedButton(
       child: Text(
         'Login',
+        style: TextStyle(color: Colors.white, fontSize: 20),
+      ),
+      color: Colors.pink,
+      padding: EdgeInsets.all(20.0),
+      shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+      onPressed: () {},
+    );
+  }
+
+  Widget googlesignin() {
+    return RaisedButton(
+      child: Text(
+        'Google Sign In',
         style: TextStyle(color: Colors.white, fontSize: 20),
       ),
       color: Colors.pink,
