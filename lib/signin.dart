@@ -45,15 +45,12 @@ class SigninState extends State<Signin> with ValidationMixin {
                         SizedBox(
                           height: 20.0,
                         ),
-                        Row(
-                        mainAxisAlignment :MainAxisAlignment.spaceEvenly,
-                        children: [
                         submit(),
                          SizedBox(
                           height: 20.0,
                         ),
                         googlesignin(),
-                        ])
+                        
                       ]),
                     )))));
   }
@@ -111,7 +108,7 @@ class SigninState extends State<Signin> with ValidationMixin {
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-      onPressed: () {},
+      onPressed: validateAndSubmit,
     );
   }
 
@@ -124,7 +121,7 @@ class SigninState extends State<Signin> with ValidationMixin {
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-      onPressed: () {},
+      onPressed: gSignIn,
     );
   }
 
