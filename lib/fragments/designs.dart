@@ -12,7 +12,7 @@ class Designs extends StatelessWidget {
                 child: Image.asset(
                   'assets/pallazo.jpg',
                 ),
-                footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),
+                footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),
                )),
         
             Card(
@@ -20,44 +20,44 @@ class Designs extends StatelessWidget {
                     child: Image.asset(
               'assets/dress.jpg',
             ),
-            footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),),
+            footer: Text('Dress', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),),
             ),
             Card(
                 child: GridTile(
                     child: Image.asset(
               'assets/peplum.jpg',
             ),
-            footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),)),
+            footer: Text('Coats', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),)),
             Card(
                 child: GridTile(
                     child: Image.asset(
               'assets/shirts.jpg',
             ),
-            footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),),),
+            footer: Text('Shirts', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),),),
             Card(
                 child: GridTile(
                     child: Image.asset(
               'assets/shorts.jpg',
             ),
-            footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),),),
+            footer: Text('Shorts', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),),),
             Card(
                 child: GridTile(
                     child: Image.asset(
               'assets/tishat.jpg',
             ),
-            footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),),),
+            footer: Text('T-shirts', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),),),
             Card(
                 child: GridTile(
                     child: Image.asset(
               'assets/trouser.jpg',
             ),
-            footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),),),
+            footer: Text('Trouser', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),),),
             Card(
                 child: GridTile(
                 child: Image.asset(
                   'assets/skirt.jpg',
                 ),
-                footer: Text('Pallazo Pants', textAlign: TextAlign.justify, style: TextStyle(color: Colors.white),),),
+                footer: Text('Skirt', textAlign: TextAlign.justify, style: TextStyle(fontWeight: FontWeight.bold),),),
               
             )
           ],
