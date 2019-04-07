@@ -87,6 +87,7 @@ class SigninState extends State<Signin> with ValidationMixin {
 
   Widget password() {
     return TextFormField(
+      obscureText: true,
       decoration: InputDecoration(
         labelText: 'password',
         hintText: '123456',
