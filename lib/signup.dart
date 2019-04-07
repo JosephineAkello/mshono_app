@@ -149,7 +149,7 @@ class SignupState extends State<Signup> with ValidationMixin {
       ),
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+      shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
       onPressed: validateAndSubmit,
     );
   }
