@@ -16,6 +16,7 @@ class HomePageState extends State<HomePage>{
 
   Widget build(conetxt){
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.pink),
       home: Scaffold(
         appBar: AppBar(
@@ -40,35 +41,35 @@ class HomePageState extends State<HomePage>{
                 ),
                 ListTile(
                   title: Text('Designs'),
-                  leading: Icon(Icons.filter_vintage),
+                  leading: Icon(Icons.filter_vintage, color: Colors.pink,),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                   },
                 ),
                 ListTile(
                   title: Text('Fabric'),
-                  leading: Icon(Icons.flare),
+                  leading: Icon(Icons.flare, color: Colors.pink),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Fabric()));
                   },
                 ),
                 ListTile(
                   title: Text('My Orders'),
-                  leading: Icon(Icons.gavel),
+                  leading: Icon(Icons.gavel, color: Colors.pink),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Orders()));
                   },
                 ),
                 ListTile(
                   title: Text('Measurements'),
-                  leading: Icon(Icons.book),
+                  leading: Icon(Icons.book, color: Colors.pink),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Measurements()));
                   },
                 ),
                 ListTile(
                   title: Text('Payments'),
-                  leading: Icon(Icons.attach_money),
+                  leading: Icon(Icons.attach_money, color: Colors.pink),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Payments()));
                   },
