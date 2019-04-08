@@ -9,8 +9,9 @@ class DesignDetails extends StatefulWidget{
 class DesignDetailsState extends State<DesignDetails>{
   Widget build(context){
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        
+
       ),
     );
   }
