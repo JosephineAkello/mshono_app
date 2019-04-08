@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Designs extends StatelessWidget {
   Widget build(context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: GridView.count(
           crossAxisCount: 2,
@@ -12,22 +13,36 @@ class Designs extends StatelessWidget {
               child: Image.asset(
                 'assets/pallazo.jpg',
               ),
-              footer: Text(
-                'Pallazo Pants',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+              footer: Container(
+                  color: Colors.white,
+                  child: ListTile(
+                      leading: Text(
+                        'Pallazo Pants',
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      trailing: Icon(
+                        Icons.favorite_border,
+                        color: Colors.red,
+                      ))),
             )),
             Card(
               child: GridTile(
                 child: Image.asset(
                   'assets/dress.jpg',
                 ),
-                footer: Text(
-                  'Dress',
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                footer: Container(
+                    color: Colors.white,
+                    child: ListTile(
+                        leading: Text(
+                          'Dress',
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        trailing: Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        ))),
               ),
             ),
             Card(
@@ -35,22 +50,36 @@ class Designs extends StatelessWidget {
               child: Image.asset(
                 'assets/peplum.jpg',
               ),
-              footer: Text(
-                'Coats',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+              footer: Container(
+                  color: Colors.white,
+                  child: ListTile(
+                      leading: Text(
+                        'Coats',
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      trailing: Icon(
+                        Icons.favorite_border,
+                        color: Colors.red,
+                      ))),
             )),
             Card(
               child: GridTile(
                 child: Image.asset(
                   'assets/shirts.jpg',
                 ),
-                footer: Text(
-                  'Shirts',
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                footer: Container(
+                    color: Colors.white,
+                    child: ListTile(
+                        leading: Text(
+                          'Shirts',
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        trailing: Icon(
+                          Icons.favorite_border,
+                          color: Colors.red,
+                        ))),
               ),
             ),
             Card(
@@ -58,11 +87,18 @@ class Designs extends StatelessWidget {
                 child: Image.asset(
                   'assets/shorts.jpg',
                 ),
-                footer: Text(
-                  'Shorts',
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                footer: Container(
+                    color: Colors.white,
+                    child: ListTile(
+                        leading: Text(
+                          'Shorts',
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        trailing: Icon(
+                          Icons.favorite,
+                          color: Colors.red,
+                        ))),
               ),
             ),
             Card(
@@ -70,11 +106,18 @@ class Designs extends StatelessWidget {
                 child: Image.asset(
                   'assets/tishat.jpg',
                 ),
-                footer: Text(
-                  'T-shirts',
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                footer: Container(
+                    color: Colors.white,
+                    child: ListTile(
+                        leading: Text(
+                          'T-shirts',
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        trailing: Icon(
+                          Icons.favorite_border,
+                          color: Colors.red,
+                        ))),
               ),
             ),
             Card(
@@ -82,11 +125,18 @@ class Designs extends StatelessWidget {
                 child: Image.asset(
                   'assets/trouser.jpg',
                 ),
-                footer: Text(
-                  'Trouser',
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                footer: Container(
+                    color: Colors.white,
+                    child: ListTile(
+                        leading: Text(
+                          'Trouser',
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        trailing: Icon(
+                          Icons.favorite_border,
+                          color: Colors.red,
+                        ))),
               ),
             ),
             Card(
@@ -94,11 +144,18 @@ class Designs extends StatelessWidget {
                 child: Image.asset(
                   'assets/skirt.jpg',
                 ),
-                footer: Text(
-                  'Skirt',
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
+                footer: Container(
+                    color: Colors.white,
+                    child: ListTile(
+                        leading: Text(
+                          'Skirt',
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        trailing: Icon(
+                          Icons.favorite_border,
+                          color: Colors.red,
+                        ))),
               ),
             )
           ],

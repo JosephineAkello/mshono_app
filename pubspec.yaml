@@ -52,6 +52,15 @@ flutter:
      - assets/tishat.jpg
      - assets/trouser.jpg
      - assets/skirt.jpg
+     - assets/cotton.jpg
+     - assets/denim.jpg
+     - assets/kitenge.jpg
+     - assets/lace.jpg
+     - assets/silks.jpg
+     - assets/velvet.jpg
+     - assets/vintage.jpg
+     - assets/leathers.jpg
+     
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
