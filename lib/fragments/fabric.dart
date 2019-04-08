@@ -16,10 +16,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/cotton.jpg',
               ),
-              footer: Text(
-                'Cotton fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Cotton Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite, color: Colors.red,)
+                )
+                
               ),
             )),
             Card(
@@ -27,10 +32,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/denim.jpg',
               ),
-              footer: Text(
-                'Denim fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Denim Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite_border, color: Colors.red,)
+                )
+                
               ),
             )),
             Card(
@@ -38,10 +48,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/kitenge.jpg',
               ),
-              footer: Text(
-                'Kitenge fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Kitenge Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite, color: Colors.red,)
+                )
+                
               ),
             )),
             Card(
@@ -49,10 +64,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/lace.jpg',
               ),
-              footer: Text(
-                'Lace fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Lace Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite, color: Colors.red,)
+                )
+                
               ),
             )),
             Card(
@@ -60,10 +80,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/silks.jpg',
               ),
-              footer: Text(
-                'Silk fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Silk Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite_border, color: Colors.red,)
+                )
+                
               ),
             )),
             Card(
@@ -71,10 +96,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/velvet.jpg',
               ),
-              footer: Text(
-                'Velvet fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Velvet Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite_border, color: Colors.red,)
+                )
+                
               ),
             )),
             Card(
@@ -82,10 +112,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/vintage.jpg',
               ),
-              footer: Text(
-                'Vintage fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Vintage Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite_border, color: Colors.red,)
+                )
+                
               ),
             )),
             Card(
@@ -93,10 +128,15 @@ class Fabric extends StatelessWidget{
               child: Image.asset(
                 'assets/leathers.jpg',
               ),
-              footer: Text(
-                'Leather fabric',
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text('Leather Fabric',
                 textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite_border, color: Colors.red,) ,
+                )
+                
               ),
             )), ]),
             
