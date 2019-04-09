@@ -23,7 +23,8 @@ class DesignDetailsState extends State<DesignDetails> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            body: ListView(children: [
+          floatingActionButton: Icon(Icons.shopping_cart, color: Colors.purple,),
+          body: ListView(children: [
           Container(
             height: 300,
             child: GridTile(
@@ -37,15 +38,53 @@ class DesignDetailsState extends State<DesignDetails> {
                     leading: Text(
                       widget.designDetailsName,
                       style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 30.0),
+                          fontWeight: FontWeight.bold, fontSize: 20.0),
                     ),
                     trailing: Text('Price:  \$${widget.designDetailsPrice}',
                         style: TextStyle(
-                            fontSize: 30.0,
+                            fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                             color: Colors.purpleAccent)),
-                  )),
+                  )
+                  ),
             ),
+          ),
+          Row(
+            children: <Widget>[
+              
+              Expanded(
+                child: MaterialButton(
+                  onPressed: (){},
+                  color: Colors.pinkAccent,
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text('Color',style: TextStyle(color: Colors.white,fontSize: 15),),
+                      ),
+                      Expanded(
+                        child: Icon(Icons.arrow_drop_down),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: MaterialButton(
+                  onPressed: (){},
+                  color: Colors.pinkAccent,
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: Text('Quantity',style: TextStyle(color: Colors.white, fontSize: 15)),
+                      ),
+                      Expanded(
+                        child: Icon(Icons.arrow_drop_down),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
           )
         ])));
   }
