@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Fabric extends StatelessWidget {
   Widget build(context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.pink),
       home: Scaffold(
         appBar: AppBar(
