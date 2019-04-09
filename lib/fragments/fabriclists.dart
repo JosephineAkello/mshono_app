@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'buildfabricdetails.dart';
 
 class FabricLists extends StatefulWidget{
   createState(){
@@ -93,7 +94,9 @@ this.fabricprice,
         tag: fabricname,
         child: Material(
         child: InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> FabricDetails()));
+            },
             child: GridTile(
             child: Image.asset(
               fabricimage,
