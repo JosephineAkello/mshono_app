@@ -11,51 +11,51 @@ class FabricLists extends StatefulWidget{
   var fabricLists = [
     {
     "name": "Cotton Fabric",
-      "image": "assets/pallazo.jpg",
+      "image": "assets/cotton.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 2000,
   },
   {
     "name": "Denim Fabric",
-      "image": "'assets/denim.jpg'",
+      "image": "assets/denim.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 1000,
   },
   {
     "name": "Kitenge Fabric",
       "image": "assets/kitenge.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 1500,
   },
   {
     "name": "Lace Fabric",
       "image": "assets/lace.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 1000,
   },
   {
     "name": "Silk Fabric",
       "image": "assets/silks.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 2000,
   },
   {
     "name": "Velvet Fabric",
       "image": "assets/velvet.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 2500,
   },
   {
     "name": "Vintage Fabric",
       "image": "assets/vintage.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 1200,
   },
   {
     "name": "Leather Fabric",
       "image": "assets/leathers.jpg",
       "description": "buggy pants for women",
-      "price": 200,
+      "price": 3000,
   },
   ];
 
