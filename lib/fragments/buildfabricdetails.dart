@@ -53,7 +53,70 @@ class FabricDetailsState extends State<FabricDetails>{
                                 color: Colors.purpleAccent)),
                       )),
                 ),
-              ),]
-    ) ) );
+              ),
+ 
+         Row(
+                children: <Widget>[
+                  Expanded(
+                    child: MaterialButton(
+                      onPressed: () {},
+                      color: Colors.pinkAccent,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(
+                              'Size',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15),
+                            ),
+                          ),
+                          Expanded(
+                            child: Icon(Icons.arrow_drop_down),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: MaterialButton(
+                      onPressed: () {},
+                      color: Colors.pinkAccent,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text(
+                              'Color',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15),
+                            ),
+                          ),
+                          Expanded(
+                            child: Icon(Icons.arrow_drop_down),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: MaterialButton(
+                      onPressed: () {},
+                      color: Colors.pinkAccent,
+                      child: Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Text('Qty',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 15)),
+                          ),
+                          Expanded(
+                            child: Icon(Icons.arrow_drop_down),
+                          )
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              )
+    ])) );
   }
 }
