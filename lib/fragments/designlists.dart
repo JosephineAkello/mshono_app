@@ -19,7 +19,7 @@ var designList= [
     "name": "Dress",
     "image": "assets/dress.jpg",
     "description": "buggy pants for women",
-    "price": 100,
+    "price": 500,
   },
   {
     "name": "Coats",
@@ -31,7 +31,7 @@ var designList= [
     "name": "Shirts",
     "image": "assets/shirts.jpg",
     "description": "buggy pants for women",
-    "price": 100,
+    "price": 600,
   },
   {
     "name": "Shorts",
@@ -43,19 +43,19 @@ var designList= [
     "name": "T-shirts",
     "image": "assets/tishat.jpg",
     "description": "buggy pants for women",
-    "price": 100,
+    "price": 1000,
   },
   {
     "name": "'Trouser'",
     "image": "assets/trouser.jpg",
     "description": "buggy pants for women",
-    "price": 100,
+    "price": 1000,
   },
   {
     "name": "Skirt",
     "image": "assets/skirt.jpg",
     "description": "buggy pants for women",
-    "price": 100,
+    "price": 500,
   },
   ];
 @override
