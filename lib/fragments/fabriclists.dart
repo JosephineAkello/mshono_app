@@ -211,3 +211,19 @@ class FabricLists extends StatefulWidget{
      );
    }
  }
+class Single_fabric extends StatelessWidget{
+  final fabricname;
+  final fabricimage;
+  final fabricprice;
+
+Single_fabric({
+this.fabricname,
+this.fabricimage,
+this.fabricprice,
+});
+
+
+  Widget build(context){
+    return Container();
+  }
+}
