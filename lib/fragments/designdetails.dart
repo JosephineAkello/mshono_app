@@ -23,10 +23,14 @@ class DesignDetailsState extends State<DesignDetails> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            floatingActionButton: Icon(
+            floatingActionButton: FloatingActionButton(
+              backgroundColor: Colors.purple[100],
+              shape:  CircleBorder(),
+              child: Icon(
               Icons.shopping_cart,
               color: Colors.purple,
-            ),
+             ),
+             onPressed: (){}, ),
             body: ListView(children: [
               Container(
                 height: 300,
