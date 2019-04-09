@@ -95,7 +95,11 @@ this.fabricprice,
         child: Material(
         child: InkWell(
             onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> FabricDetails()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> FabricDetails(
+                fabricdetailsname: fabricname,
+                fabricdetailsimage: fabricimage,
+                fabricdetailsprice: fabricprice,
+              )));
             },
             child: GridTile(
             child: Image.asset(
