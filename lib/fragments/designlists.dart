@@ -97,7 +97,13 @@ class Single_design extends StatelessWidget{
           child: Material(
             child: InkWell(
               onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> DesignDetails()));
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> DesignDetails(
+            designDetailsName: design_name,
+            designDetailsImage: design_image,
+            designDetailsDescription: design_description,
+            designDetailsPrice: design_price,
+
+        )));
       }, 
                 child: GridTile(
               child: Image.asset(
