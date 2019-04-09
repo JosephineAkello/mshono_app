@@ -16,166 +16,73 @@ var designList= [
     "price": 100,
   },
   {
-    "name": "Pallazo Pants",
-    "image": "assets/pallazo.jpg",
+    "name": "Dress",
+    "image": "assets/dress.jpg",
     "description": "buggy pants for women",
     "price": 100,
-  }
-];
+  },
+  {
+    "name": "Coats",
+    "image": "assets/peplum.jpg",
+    "description": "buggy pants for women",
+    "price": 100,
+  },
+  {
+    "name": "Shirts",
+    "image": "assets/shirts.jpg",
+    "description": "buggy pants for women",
+    "price": 100,
+  },
+  {
+    "name": "Shorts",
+    "image": "assets/shorts.jpg",
+    "description": "buggy pants for women",
+    "price": 100,
+  },
+  {
+    "name": "T-shirts",
+    "image": "assets/tishat.jpg",
+    "description": "buggy pants for women",
+    "price": 100,
+  },
+  {
+    "name": "'Trouser'",
+    "image": "assets/trouser.jpg",
+    "description": "buggy pants for women",
+    "price": 100,
+  },
+  {
+    "name": "Skirt",
+    "image": "assets/skirt.jpg",
+    "description": "buggy pants for women",
+    "price": 100,
+  },
+  ];
 @override
   Widget build(context) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context)=> DesignDetails()));
-      },
-    
-    child: GridView.count(
-          crossAxisCount: 2,
-          children: <Widget>[
-            Card(
-                child: GridTile(
-              child: Image.asset(
-                'assets/pallazo.jpg',
-              ),
-              footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('Pallazo Pants',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite_border, color: Colors.red,)
-                )
-                
-              ),
-            )),
-            Card(
-              child: GridTile(
-                child: Image.asset(
-                  'assets/dress.jpg',
-                ),
-                footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('Dress',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite, color: Colors.red,)
-                )
-                
-              ),
-              ),
-            ),
-            Card(
-                child: GridTile(
-              child: Image.asset(
-                'assets/peplum.jpg',
-              ),
-             footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('Coats',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite_border, color: Colors.red,)
-                )
-                
-              ),
-            )),
-            Card(
-              child: GridTile(
-                child: Image.asset(
-                  'assets/shirts.jpg',
-                ),
-                footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('Shirts',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite_border, color: Colors.red,)
-                )
-                
-              ),
-              ),
-            ),
-            Card(
-              child: GridTile(
-                child: Image.asset(
-                  'assets/shorts.jpg',
-                ),
-                footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('Shorts',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite_border, color: Colors.red,)
-                )
-                
-              ),
-              ),
-            ),
-            Card(
-              child: GridTile(
-                child: Image.asset(
-                  'assets/tishat.jpg',
-                ),
-                footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('T-shirts',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite_border, color: Colors.red,)
-                )
-                
-              ),
-              ),
-            ),
-            Card(
-              child: GridTile(
-                child: Image.asset(
-                  'assets/trouser.jpg',
-                ),
-                footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('Trouser',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite_border, color: Colors.red,)
-                )
-                
-              ),
-              ),
-            ),
-            Card(
-              child: GridTile(
-                child: Image.asset(
-                  'assets/skirt.jpg',
-                ),
-                footer: Container(
-                color: Colors.white,
-                child:  ListTile(
-                  leading: Text('Skirt',
-                textAlign: TextAlign.justify,
-                style: TextStyle(fontWeight: FontWeight.bold),),
-                trailing: Icon(Icons.favorite_border, color: Colors.red,)
-                )
-                
-              ),
-              ),
-            )
-           ],
-     ) );
+   return GridView.builder(
+     itemCount: designList.length,
+     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+       crossAxisCount: 2), 
+       itemBuilder: (context, int index){
+    return Single_design(
+      design_name: designList[index]["name"],
+      design_image: designList[index]["image"],
+      design_description: designList[index]["description"],
+      design_price: designList[index]["price"],
+    );
+       }
+   );
+  
   }
 }
 class Single_design extends StatelessWidget{
   final design_name;
   final design_image;
-  final design_price;
   final design_description;
+  final design_price;
 
+  
  Single_design({
  this.design_name,
  this.design_image,
@@ -184,6 +91,34 @@ class Single_design extends StatelessWidget{
 
 });
   Widget build(context){
-    return Container();
+    return Card(
+       child: Hero(
+         tag: design_name,
+          child: Material(
+            child: InkWell(
+              onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> DesignDetails()));
+      }, 
+                child: GridTile(
+              child: Image.asset(
+                design_image,
+              ),
+              footer: Container(
+                color: Colors.white,
+                child:  ListTile(
+                  leading: Text(design_name,
+                textAlign: TextAlign.justify,
+                style: TextStyle(fontWeight: FontWeight.bold),),
+                trailing: Icon(Icons.favorite_border, color: Colors.red,
+                ),
+                )
+                
+              ),
+            )),
+            
+              ),
+            )
+      
+     ) ;
   }
 }
