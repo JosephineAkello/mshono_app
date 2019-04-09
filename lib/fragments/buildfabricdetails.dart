@@ -1,35 +1,34 @@
 import 'package:flutter/material.dart';
 
-class FabricDetails extends StatefulWidget{
+class FabricDetails extends StatefulWidget {
   final fabricdetailsname;
   final fabricdetailsimage;
   final fabricdetailsprice;
 
+  FabricDetails(
+      {this.fabricdetailsname,
+      this.fabricdetailsimage,
+      this.fabricdetailsprice});
 
-  FabricDetails({
-    this.fabricdetailsname,
-    this.fabricdetailsimage,
-    this.fabricdetailsprice
-  });
-
-  createState(){
+  createState() {
     return FabricDetailsState();
   }
 }
 
-class FabricDetailsState extends State<FabricDetails>{
-  Widget build(context){
-  return MaterialApp(
+class FabricDetailsState extends State<FabricDetails> {
+  Widget build(context) {
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             floatingActionButton: FloatingActionButton(
               backgroundColor: Colors.purple[100],
-              shape:  CircleBorder(),
+              shape: CircleBorder(),
               child: Icon(
-              Icons.shopping_cart,
-              color: Colors.purple,
-             ),
-             onPressed: (){}, ),
+                Icons.shopping_cart,
+                color: Colors.purple,
+              ),
+              onPressed: () {},
+            ),
             body: ListView(children: [
               Container(
                 height: 300,
@@ -54,8 +53,7 @@ class FabricDetailsState extends State<FabricDetails>{
                       )),
                 ),
               ),
- 
-         Row(
+              Row(
                 children: <Widget>[
                   Expanded(
                     child: MaterialButton(
@@ -117,6 +115,6 @@ class FabricDetailsState extends State<FabricDetails>{
                   )
                 ],
               )
-    ])) );
+            ])));
   }
 }
