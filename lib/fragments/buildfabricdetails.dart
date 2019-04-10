@@ -59,19 +59,24 @@ class FabricDetailsState extends State<FabricDetails> {
                     child: MaterialButton(
                       onPressed: () {
                         showDialog(
-                        context: context,
-                        builder: (context) {
-                      return AlertDialog(
-                        backgroundColor: Colors.yellowAccent,
-                        shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                backgroundColor: Colors.yellowAccent,
+                                shape: BeveledRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
                                 title: Text('Size'),
-                        content: Text('Select design size'),
+                                content: Text('Select design size'),
                                 actions: <Widget>[
                                   MaterialButton(
                                     onPressed: () {
                                       Navigator.pop(context);
                                     },
-                                    child: Text('close',style: TextStyle(color: Colors.deepPurple),),
+                                    child: Text(
+                                      'close',
+                                      style:
+                                          TextStyle(color: Colors.deepPurple),
+                                    ),
                                   )
                                 ],
                               );
@@ -101,6 +106,9 @@ class FabricDetailsState extends State<FabricDetails> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
+                                backgroundColor: Colors.yellowAccent,
+                                shape: BeveledRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
                                 title: Text('Color'),
                                 content: Text('Select design color'),
                                 actions: <Widget>[
@@ -135,23 +143,27 @@ class FabricDetailsState extends State<FabricDetails> {
                       child: MaterialButton(
                     onPressed: () {
                       showDialog(
-                        context: context,
-                        builder: (context) {
-                      return AlertDialog(
-                        backgroundColor: Colors.yellowAccent,
-                        shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-                                title: Text('Quantity'),
-                        content: Text('Select design qty'),
-                                actions: <Widget>[
-                                  MaterialButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: Text('close',style: TextStyle(color: Colors.deepPurple),),
-                                  )
-                                ],
-                              );
-                            });
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              backgroundColor: Colors.yellowAccent,
+                              shape: BeveledRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0)),
+                              title: Text('Quantity'),
+                              content: Text('Select design qty'),
+                              actions: <Widget>[
+                                MaterialButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text(
+                                    'close',
+                                    style: TextStyle(color: Colors.deepPurple),
+                                  ),
+                                )
+                              ],
+                            );
+                          });
                     },
                     color: Colors.pinkAccent,
                     child: Row(children: <Widget>[
