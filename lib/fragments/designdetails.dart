@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mshono_app/fragments/cart.dart';
 
 class DesignDetails extends StatefulWidget {
   final designDetailsName;
@@ -30,7 +31,9 @@ class DesignDetailsState extends State<DesignDetails> {
               Icons.shopping_cart,
               color: Colors.purple,
             ),
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
+            },
           ),
           body: ListView(
             children: [
