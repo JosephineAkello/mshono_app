@@ -77,7 +77,22 @@ class FabricDetailsState extends State<FabricDetails> {
                   ),
                   Expanded(
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                title: Text('Qty'),
+                                content: Text('Select fabric quantity'),
+                                actions: <Widget>[
+                                  MaterialButton(
+                                    onPressed: () {},
+                                    child: Text('close'),
+                                  )
+                                ],
+                              );
+                            });
+                      },
                       color: Colors.pinkAccent,
                       child: Row(
                         children: <Widget>[
@@ -96,25 +111,34 @@ class FabricDetailsState extends State<FabricDetails> {
                     ),
                   ),
                   Expanded(
-                    child: MaterialButton(
-                      onPressed: () {},
-                      color: Colors.pinkAccent,
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Text('Qty',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 15)),
-                          ),
-                          Expanded(
-                            child: Icon(Icons.arrow_drop_down),
-                          )
-                        ],
+                      child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.pinkAccent,
+                    child: Row(children: <Widget>[
+                      Expanded(
+                        child: Text('Qty',
+                            style:
+                                TextStyle(color: Colors.white, fontSize: 15)),
                       ),
-                    ),
-                  )
+                      Expanded(
+                        child: Icon(Icons.arrow_drop_down),
+                      ),
+                    ]),
+                  ))
                 ],
-              )
+              ),
+              Row(
+                children: [
+                  Expanded(
+                      child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.purple,
+                    textColor: Colors.white,
+                    child: Text('ORDER NOW',
+                        style: TextStyle(color: Colors.white, fontSize: 20)),
+                  )),
+                ],
+              ),
             ])));
   }
 }
