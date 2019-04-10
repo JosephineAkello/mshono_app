@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mshono_app/fragments/designdetails.dart';
 
-class buildDesignList extends StatefulWidget {
+class BuildDesignList extends StatefulWidget {
   createState() {
-    return buildDesignListState();
+    return BuildDesignListState();
   }
 }
 
-class buildDesignListState extends State<buildDesignList> {
+class BuildDesignListState extends State<BuildDesignList> {
   var designList = [
     {
       "name": "Pallazo Pants",
