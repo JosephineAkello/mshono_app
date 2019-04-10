@@ -68,7 +68,9 @@ class FabricDetailsState extends State<FabricDetails> {
                         content: Text('Select design size'),
                                 actions: <Widget>[
                                   MaterialButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                     child: Text('close',style: TextStyle(color: Colors.deepPurple),),
                                   )
                                 ],
@@ -103,7 +105,9 @@ class FabricDetailsState extends State<FabricDetails> {
                                 content: Text('Select design color'),
                                 actions: <Widget>[
                                   MaterialButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                     child: Text('close'),
                                   )
                                 ],
@@ -140,7 +144,9 @@ class FabricDetailsState extends State<FabricDetails> {
                         content: Text('Select design qty'),
                                 actions: <Widget>[
                                   MaterialButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                     child: Text('close',style: TextStyle(color: Colors.deepPurple),),
                                   )
                                 ],
