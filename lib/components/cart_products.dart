@@ -21,9 +21,17 @@ class CartProductsState extends State<CartProducts>{
 
   Widget build(context){
     return ListView.builder(
-      itemCount: 2,
+      itemCount: product_on_the_cart.length,
       itemBuilder: (context, index){
+     return Single_cart_product(
+       cart_prod_name: product_on_the_cart[index]["name"],
+        cart_prod_image: product_on_the_cart[index]["image"],
+        cart_prod_price: product_on_the_cart[index]["price"],
+        cart_prod_size: product_on_the_cart[index]["size"],
+        cart_prod_color: product_on_the_cart[index]["color"],
+         cart_prod_quantity: product_on_the_cart[index]["quantity"],
 
+     );
       },
 
     );
