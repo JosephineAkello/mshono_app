@@ -4,6 +4,7 @@ import 'fragments/measurements.dart';
 import 'fragments/orders.dart';
 import 'fragments/payments.dart';
 import 'fragments/designs.dart';
+import 'fragments/cart.dart';
 
 
 class HomePage extends StatefulWidget{
@@ -58,6 +59,13 @@ class HomePageState extends State<HomePage>{
                   leading: Icon(Icons.gavel, color: Colors.pink),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Orders()));
+                  },
+                ),
+                ListTile(
+                  title: Text('Cart'),
+                  leading: Icon(Icons.book, color: Colors.pink),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
                   },
                 ),
                 ListTile(
