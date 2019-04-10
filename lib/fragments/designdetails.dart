@@ -23,15 +23,17 @@ class DesignDetailsState extends State<DesignDetails> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            floatingActionButton: FloatingActionButton(
-              backgroundColor: Colors.purple[100],
-              shape:  CircleBorder(),
-              child: Icon(
+          floatingActionButton: FloatingActionButton(
+            backgroundColor: Colors.purple[100],
+            shape: CircleBorder(),
+            child: Icon(
               Icons.shopping_cart,
               color: Colors.purple,
-             ),
-             onPressed: (){}, ),
-            body: ListView(children: [
+            ),
+            onPressed: () {},
+          ),
+          body: ListView(
+            children: [
               Container(
                 height: 300,
                 child: GridTile(
@@ -55,68 +57,78 @@ class DesignDetailsState extends State<DesignDetails> {
                       )),
                 ),
               ),
+              Row(children: <Widget>[
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.pinkAccent,
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Text(
+                            'Size',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ),
+                        ),
+                        Expanded(
+                          child: Icon(Icons.arrow_drop_down),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.pinkAccent,
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Text(
+                            'Color',
+                            style: TextStyle(color: Colors.white, fontSize: 15),
+                          ),
+                        ),
+                        Expanded(
+                          child: Icon(Icons.arrow_drop_down),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.pinkAccent,
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Text('Qty',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15)),
+                        ),
+                        Expanded(
+                          child: Icon(Icons.arrow_drop_down),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ]),
               Row(
-                children: <Widget>[
+                children: [
                   Expanded(
-                    child: MaterialButton(
-                      onPressed: () {},
-                      color: Colors.pinkAccent,
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Text(
-                              'Size',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                            ),
-                          ),
-                          Expanded(
-                            child: Icon(Icons.arrow_drop_down),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: MaterialButton(
-                      onPressed: () {},
-                      color: Colors.pinkAccent,
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Text(
-                              'Color',
-                              style:
-                                  TextStyle(color: Colors.white, fontSize: 15),
-                            ),
-                          ),
-                          Expanded(
-                            child: Icon(Icons.arrow_drop_down),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: MaterialButton(
-                      onPressed: () {},
-                      color: Colors.pinkAccent,
-                      child: Row(
-                        children: <Widget>[
-                          Expanded(
-                            child: Text('Qty',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 15)),
-                          ),
-                          Expanded(
-                            child: Icon(Icons.arrow_drop_down),
-                          )
-                        ],
-                      ),
-                    ),
-                  )
+                      child: MaterialButton(
+                    onPressed: () {},
+                    color: Colors.purple,
+                    textColor: Colors.white,
+                    child: Text('ORDER NOW',
+                        style: TextStyle(color: Colors.white, fontSize: 20)),
+                  )),
                 ],
-              )
-            ])));
+              ),
+            ],
+          ),
+        ));
   }
 }
