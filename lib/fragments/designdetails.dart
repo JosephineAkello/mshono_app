@@ -21,9 +21,10 @@ class DesignDetails extends StatefulWidget {
 
 class DesignDetailsState extends State<DesignDetails> {
   Widget build(context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
+    return Scaffold(
+       appBar: AppBar(
+          title: Text('Designs Details'),
+        ),
           floatingActionButton: FloatingActionButton(
             backgroundColor: Colors.purple[100],
             shape: CircleBorder(),
@@ -32,7 +33,7 @@ class DesignDetailsState extends State<DesignDetails> {
               color: Colors.purple,
             ),
             onPressed: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
             },
           ),
           body: ListView(
@@ -189,6 +190,6 @@ class DesignDetailsState extends State<DesignDetails> {
               ),
             ],
           ),
-        ));
+        );
   }
 }
