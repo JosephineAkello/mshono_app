@@ -8,10 +8,7 @@ class Cart extends StatefulWidget {
 
 class CartState extends State<Cart> {
   Widget build(context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(primaryColor: Colors.pink),
-        home: Scaffold(
+    return  Scaffold(
           appBar: AppBar(
             title: Text('Cart'),
           ),
@@ -37,6 +34,6 @@ class CartState extends State<Cart> {
              ],
             ),
           ),
-        ));
+        );
   }
 }
