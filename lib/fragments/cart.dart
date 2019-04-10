@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mshono_app/components/cart_products.dart';
 
 class Cart extends StatefulWidget {
   createState() {
@@ -12,6 +13,8 @@ class CartState extends State<Cart> {
           appBar: AppBar(
             title: Text('Cart'),
           ),
+          body: CartProducts(),
+
           bottomNavigationBar: Container(
             child: Row(
              children: <Widget>[
