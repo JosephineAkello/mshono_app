@@ -57,7 +57,31 @@ class FabricDetailsState extends State<FabricDetails> {
                 children: <Widget>[
                   Expanded(
                     child: MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return AlertDialog(
+                                backgroundColor: Colors.yellowAccent,
+                                shape: BeveledRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
+                                title: Text('Size'),
+                                content: Text('Select design size'),
+                                actions: <Widget>[
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'close',
+                                      style:
+                                          TextStyle(color: Colors.deepPurple),
+                                    ),
+                                  )
+                                ],
+                              );
+                            });
+                      },
                       color: Colors.pinkAccent,
                       child: Row(
                         children: <Widget>[
@@ -82,11 +106,16 @@ class FabricDetailsState extends State<FabricDetails> {
                             context: context,
                             builder: (context) {
                               return AlertDialog(
-                                title: Text('Qty'),
-                                content: Text('Select fabric quantity'),
+                                backgroundColor: Colors.yellowAccent,
+                                shape: BeveledRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0)),
+                                title: Text('Color'),
+                                content: Text('Select design color'),
                                 actions: <Widget>[
                                   MaterialButton(
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
                                     child: Text('close'),
                                   )
                                 ],
@@ -112,7 +141,30 @@ class FabricDetailsState extends State<FabricDetails> {
                   ),
                   Expanded(
                       child: MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              backgroundColor: Colors.yellowAccent,
+                              shape: BeveledRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15.0)),
+                              title: Text('Quantity'),
+                              content: Text('Select design qty'),
+                              actions: <Widget>[
+                                MaterialButton(
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                  child: Text(
+                                    'close',
+                                    style: TextStyle(color: Colors.deepPurple),
+                                  ),
+                                )
+                              ],
+                            );
+                          });
+                    },
                     color: Colors.pinkAccent,
                     child: Row(children: <Widget>[
                       Expanded(
