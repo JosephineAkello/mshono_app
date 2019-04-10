@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mshono_app/fragments/cart.dart';
 
 class FabricDetails extends StatefulWidget {
   final fabricdetailsname;
@@ -28,7 +29,9 @@ class FabricDetailsState extends State<FabricDetails> {
                 Icons.shopping_cart,
                 color: Colors.purple,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
+              },
             ),
             body: ListView(children: [
               Container(
