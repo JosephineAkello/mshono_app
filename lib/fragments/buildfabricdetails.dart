@@ -17,9 +17,10 @@ class FabricDetails extends StatefulWidget {
 
 class FabricDetailsState extends State<FabricDetails> {
   Widget build(context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
+    return Scaffold(
+         appBar: AppBar(
+           title: Text('Fabric Details'),
+         ),
             floatingActionButton: FloatingActionButton(
               backgroundColor: Colors.purple[100],
               shape: CircleBorder(),
@@ -191,6 +192,6 @@ class FabricDetailsState extends State<FabricDetails> {
                   )),
                 ],
               ),
-            ])));
+            ]));
   }
 }
