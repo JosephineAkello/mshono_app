@@ -3,7 +3,7 @@ import 'fragments/fabric.dart';
 import 'fragments/measurements.dart';
 import 'fragments/orders.dart';
 import 'fragments/payments.dart';
-import 'fragments/designs.dart';
+import 'package:mshono_app/fragments/designlists.dart';
 import 'fragments/cart.dart';
 
 
@@ -63,7 +63,7 @@ class HomePageState extends State<HomePage>{
                 ),
                 ListTile(
                   title: Text('Cart'),
-                  leading: Icon(Icons.book, color: Colors.pink),
+                  leading: Icon(Icons.shopping_cart, color: Colors.pink),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Cart()));
                   },
@@ -86,7 +86,7 @@ class HomePageState extends State<HomePage>{
             ],
           ),
         ),
-        body: Designs(),
+        body: BuildDesignList(),
       ),
     );
   }
