@@ -46,7 +46,7 @@ class buildDesignListState extends State<buildDesignList> {
       "price": 1000,
     },
     {
-      "name": "'Trouser'",
+      "name": "Trouser",
       "image": "assets/trouser.jpg",
       "description": "buggy pants for women",
       "price": 1000,
