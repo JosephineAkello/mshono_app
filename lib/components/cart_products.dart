@@ -17,6 +17,18 @@ class CartProductsState extends State<CartProducts>{
       "quantity": 1,
       
 
+  },
+  {
+
+      "name": "Cotton Fabric",
+      "image": "assets/cotton.jpg",
+      "description": "buggy pants for women",
+      "price": 2000,
+      "size": "M",
+      "color": "red",
+      "quantity": 1,
+      
+
   }];
 
   Widget build(context){
@@ -55,6 +67,42 @@ Single_cart_product({
   this.cart_prod_quantity,
 });
  Widget build(context){
-    return Container();
+    return Card(
+      child: ListTile(
+        title: Text(cart_prod_name,style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+        subtitle: Column(
+          children: <Widget>[
+            Row(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(0.0),
+                  child: Text('Size:', style: TextStyle(color: Colors.purple, fontSize: 20, fontWeight: FontWeight.bold),),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(cart_prod_size,  style: TextStyle(color: Colors.pink),
+                ), ),
+               Padding(
+                  padding: EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
+                  child: Text("Color:",style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.bold),),),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(cart_prod_color,style: TextStyle(color: Colors.pink),),
+                ),
+               
+              ],
+            ),
+             Container(
+               alignment: Alignment.topLeft,
+               child: Text("\$$cart_prod_price", 
+               style: TextStyle(
+                 fontSize: 17.0,
+                 fontWeight: FontWeight.bold,
+                 color: Colors.purple),),
+                ),
+          ],
+        ),
+      ),
+    );
   }
 }
