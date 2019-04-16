@@ -68,23 +68,27 @@ Single_cart_product({
 });
  Widget build(context){
     return Card(
+       child: SingleChildScrollView(
       child: ListTile(
-        title: Text(cart_prod_name,style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
+        leading: Image.asset(cart_prod_image, width: 80, height: 80,),
+        title: Text(cart_prod_name,style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
         subtitle: Column(
+         
           children: <Widget>[
+            
             Row(
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.all(0.0),
-                  child: Text('Size:', style: TextStyle(color: Colors.purple, fontSize: 20, fontWeight: FontWeight.bold),),
+                  child: Text('Size:', style: TextStyle(color: Colors.purple, fontSize: 15, fontWeight: FontWeight.bold),),
                 ),
                 Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Text(cart_prod_size,  style: TextStyle(color: Colors.pink),
                 ), ),
                Padding(
-                  padding: EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
-                  child: Text("Color:",style: TextStyle(color: Colors.purple,fontSize: 20,fontWeight: FontWeight.bold),),),
+                  padding: EdgeInsets.fromLTRB(20.0, 4.0, 4.0, 4.0),
+                  child: Text("Color:",style: TextStyle(color: Colors.purple,fontSize: 15,fontWeight: FontWeight.bold),),),
                 Padding(
                   padding: EdgeInsets.all(4.0),
                   child: Text(cart_prod_color,style: TextStyle(color: Colors.pink),),
@@ -96,13 +100,22 @@ Single_cart_product({
                alignment: Alignment.topLeft,
                child: Text("\$$cart_prod_price", 
                style: TextStyle(
-                 fontSize: 17.0,
+                 fontSize: 20.0,
                  fontWeight: FontWeight.bold,
-                 color: Colors.purple),),
+                 color: Colors.red),),
                 ),
           ],
         ),
+        //trailing: Column(
+          
+         // children: <Widget>[
+            //IconButton(icon: Icon(Icons.arrow_drop_up),onPressed: (){},),
+           // Text('$cart_prod_quantity'),
+            //IconButton(icon: Icon(Icons.arrow_drop_down),onPressed: (){},),
+          //],
+       // ),
       ),
+       ),
     );
   }
 }
