@@ -40,6 +40,14 @@ class DesignDetailsState extends State<DesignDetails> {
             children: [
               Container(
                 height: 300,
+              
+                decoration: BoxDecoration(
+                    color: Colors.grey,
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(200.0),
+                    bottomLeft: Radius.circular(200.0)
+                  )
+                ),
                 child: GridTile(
                   child: Container(
                       child: Image.asset(
