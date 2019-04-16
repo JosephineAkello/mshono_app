@@ -61,6 +61,13 @@ flutter:
      - assets/velvet.jpg
      - assets/vintage.jpg
      - assets/leathers.jpg
+     - assets/dresssketch.jpg
+     - assets/jacket.jpg
+     - assets/shirtsketch.png
+     - assets/shortsketch.png
+     - assets/skirtsketch.jpg
+     - assets/trousersketch.jpg
+     - assets/tshirtsketch.png
      
   #  - images/a_dot_ham.jpeg
 
