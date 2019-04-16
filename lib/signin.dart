@@ -3,6 +3,7 @@ import 'mixins/validationMixins.dart';
 import 'home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class Signin extends StatefulWidget {
   createState() {
@@ -45,6 +46,11 @@ class SigninState extends State<Signin> with ValidationMixin {
                           height: 20.0,
                         ),
                         submit(),
+                         SizedBox(
+                          height: 20.0,
+                        ),
+                        googlesignin(),
+                        
                       ]),
                     )))));
   }
@@ -81,6 +87,7 @@ class SigninState extends State<Signin> with ValidationMixin {
 
   Widget password() {
     return TextFormField(
+      obscureText: true,
       decoration: InputDecoration(
         labelText: 'password',
         hintText: '123456',
@@ -102,8 +109,45 @@ class SigninState extends State<Signin> with ValidationMixin {
       color: Colors.pink,
       padding: EdgeInsets.all(20.0),
       shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
-      onPressed: validateAndSubmit
-      );
+      onPressed: validateAndSubmit,
+    );
+  }
+
+  Widget googlesignin() {
+    return RaisedButton(
+      child: Text(
+        'Google Sign In',
+        style: TextStyle(color: Colors.white, fontSize: 20),
+      ),
+      color: Colors.pink,
+      padding: EdgeInsets.all(20.0),
+      shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+      onPressed: gSignIn,
+    );
+  }
+
+ final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
+  final GoogleSignIn googleSignIn = GoogleSignIn();
+  gSignIn() async {
+    try {
+      GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+      GoogleSignInAuthentication authentication =
+          await googleSignInAccount.authentication;
+      await firebaseAuth
+          .signInWithGoogle(
+              accessToken: authentication.accessToken,
+              idToken: authentication.idToken)
+          .then((userId) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
+        );
+      });
+    } catch (e) {
+      print(e);
+      Fluttertoast.showToast(
+          msg: e.message, backgroundColor: Colors.pinkAccent, toastLength: Toast.LENGTH_LONG);
+    }
   }
 
   bool validateSave() {
