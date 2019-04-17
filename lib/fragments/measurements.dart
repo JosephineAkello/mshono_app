@@ -8,10 +8,14 @@ class Measurements extends StatelessWidget {
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Measurements,'),
+        title: Text(
+          'Measurements',
+          style: TextStyle(fontSize: 25.0),
+        ),
+        centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.purple[100],
+        backgroundColor: Colors.purple,
         shape: CircleBorder(),
         child: Icon(Icons.note_add),
         onPressed: () {},
@@ -28,17 +32,25 @@ class Measurements extends StatelessWidget {
                   _controller = controller;
                 },
               ),
-              subtitle: Text(
-                'Watch this video for guides on how to take measurements,you only need a tape meaure, someone to assist in taking down the measurents , a pen and a note book',
-                style: TextStyle(fontWeight: FontWeight.bold),
+              subtitle: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Text(
+                  'Watch this video for guides on how to take measurements,you only need a tape meaure, someone to assist in taking down the measurents , a pen and a note book',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           ),
           Card(
             child: ListTile(
-              title: Text('Shorts',
-                  style:
-                      TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              title: Text(
+                'Shorts',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink),
+                textAlign: TextAlign.center,
+              ),
               subtitle: Column(
                 children: <Widget>[
                   Image.asset('assets/shortsketch.png'),
@@ -53,9 +65,15 @@ class Measurements extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('Coats',
-                  style:
-                      TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              title: Text(
+                'Coats',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.pink,
+                ),
+                textAlign: TextAlign.center,
+              ),
               subtitle: Column(
                 children: <Widget>[
                   Image.asset('assets/jacket.jpg'),
@@ -74,9 +92,15 @@ class Measurements extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('Trouser',
-                  style:
-                      TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              title: Text(
+                'Trouser',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.pink,
+                ),
+                textAlign: TextAlign.center,
+              ),
               subtitle: Column(
                 children: <Widget>[
                   Image.asset('assets/trousersketch.jpg'),
@@ -92,9 +116,14 @@ class Measurements extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('Dress',
-                  style:
-                      TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              title: Text(
+                'Dress',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink),
+                textAlign: TextAlign.center,
+              ),
               subtitle: Column(
                 children: <Widget>[
                   Image.asset('assets/dresssketch.jpg'),
@@ -114,9 +143,14 @@ class Measurements extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('Shirts',
-                  style:
-                      TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              title: Text(
+                'Shirts',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink),
+                textAlign: TextAlign.center,
+              ),
               subtitle: Column(
                 children: <Widget>[
                   Image.asset('assets/shirtsketch.png'),
@@ -133,9 +167,14 @@ class Measurements extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('T-Shirts',
-                  style:
-                      TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              title: Text(
+                'T-Shirts',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink),
+                textAlign: TextAlign.center,
+              ),
               subtitle: Column(
                 children: <Widget>[
                   Image.asset('assets/tshirtsketch.png'),
@@ -152,16 +191,20 @@ class Measurements extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text('Skirts',
-                  style:
-                      TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+              title: Text(
+                'Skirts',
+                style: TextStyle(
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.pink),
+                textAlign: TextAlign.center,
+              ),
               subtitle: Column(
                 children: <Widget>[
                   Image.asset('assets/skirtsketch.jpg'),
                   Text('For a Skirt you need to measure : \n'
                       'W:-> (Waist) \n'
                       'H:-> (Hips) \n'
-                     
                       'L:-> (Length) \n'),
                 ],
               ),
