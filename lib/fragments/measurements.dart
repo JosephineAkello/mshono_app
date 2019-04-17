@@ -18,7 +18,11 @@ class Measurements extends StatelessWidget {
         backgroundColor: Colors.purple,
         shape: CircleBorder(),
         child: Icon(Icons.note_add),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=> MeasurementsDetails());
+          
+        },
       ),
       body: ListView(
         children: <Widget>[
