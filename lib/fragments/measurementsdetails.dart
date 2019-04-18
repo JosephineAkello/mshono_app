@@ -22,7 +22,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
           child: Column(children: [
             Row(children: <Widget>[
               Expanded(
-                child: Text('Name: '),
+                child: Text('Name: ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
               ),
               Expanded(
                 child: TextFormField(
@@ -35,7 +35,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
             ]),
             Row(children: <Widget>[
               Expanded(
-                child: Text('Design Choice: '),
+                child: Text('Design Choice: ',style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
               ),
               Expanded(
                 child: TextFormField(
@@ -48,7 +48,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
             ]),
             Row(children: <Widget>[
               Expanded(
-                child: Text('Gender:'),
+                child: Text('Gender:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
               ),
               Expanded(
                 child: TextFormField(
@@ -59,7 +59,81 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                 ),
               ),
             ]),
+            Container(
+              padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
+              child:  Text('Dress', textAlign: TextAlign.center, style: TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),),),
+             Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Shoulders:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Bodice:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Waist:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Hips:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+             Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Bust:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
           ]),
+          
         ),
       ),
     );
