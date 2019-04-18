@@ -20,24 +20,45 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
       body: Container(
         child: Form(
           child: Column(children: [
-            TextFormField(
-              decoration: InputDecoration(
-                  border: UnderlineInputBorder(),
-                  hintText: 'Please enter your name',
-                  labelText: 'Name'),
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                  border: UnderlineInputBorder(),
-                  hintText: 'Please enter your design choice',
-                  labelText: 'Design Choice'),
-            ),
-            TextFormField(
-              decoration: InputDecoration(
-                  border: UnderlineInputBorder(),
-                  hintText: 'Please enter your gender',
-                  labelText: 'Male / Female'),
-            ),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text('Name: '),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: 'Please enter your name',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text('Design Choice: '),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: 'Please enter your design choice',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text('Gender:'),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: 'Please enter your gender',
+                  ),
+                ),
+              ),
+            ]),
           ]),
         ),
       ),
