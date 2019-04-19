@@ -175,6 +175,92 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                 ),
               ),
             ]),
+            Text('Shirt', textAlign: TextAlign.center, style: TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),),
+              Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Shoulders:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+              ]),
+               Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Chest:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Bodice:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+             Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Waist:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+             Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Sleeve Length:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+             Row(children: <Widget>[
+              
+              Expanded(
+                child: Text('Sleeve width:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+          
             ]),
              ),
               ),
