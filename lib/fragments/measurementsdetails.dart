@@ -193,6 +193,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Container(
+              padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
               child: Text(
                 'Skirt',
                 textAlign: TextAlign.center,
@@ -263,6 +264,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Container(
+              padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
               child: Text(
                 'Shirt',
                 textAlign: TextAlign.center,
@@ -393,6 +395,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Container(
+              padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
               child: Text(
                 'Trouser',
                 textAlign: TextAlign.center,
@@ -503,6 +506,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Container(
+            padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
             child: Text(
               'Shorts',
               textAlign: TextAlign.center,
@@ -592,6 +596,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Container(
+            padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
             child: Text(
               'T-Shirts',
               textAlign: TextAlign.center,
@@ -701,6 +706,7 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Container(
+            padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
             child: Text(
               'Coats',
               textAlign: TextAlign.center,
