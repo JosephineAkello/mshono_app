@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_player/youtube_player.dart';
+import 'measurementsdetails.dart';
 
 class Measurements extends StatelessWidget {
   VideoPlayerController _controller;
@@ -19,9 +20,10 @@ class Measurements extends StatelessWidget {
         shape: CircleBorder(),
         child: Icon(Icons.note_add),
         onPressed: () {
-          Navigator.push(context, 
-          MaterialPageRoute(builder: (context)=> MeasurementsDetails());
-          
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => MeasurementDetails()),
+          );
         },
       ),
       body: ListView(
