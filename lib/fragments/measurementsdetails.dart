@@ -17,6 +17,11 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
         ),
         centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purpleAccent,
+        onPressed: (){},
+        child: Icon(Icons.send),
+      ),
       body: Container(
         child: Form(
           child: SingleChildScrollView(
