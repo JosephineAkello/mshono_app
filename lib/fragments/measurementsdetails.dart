@@ -19,10 +19,18 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
       ),
       body: Container(
         child: Form(
+          child: SingleChildScrollView(
           child: Column(children: [
             Row(children: <Widget>[
               Expanded(
-                child: Text('Name: ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Name: ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -35,7 +43,14 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
             ]),
             Row(children: <Widget>[
               Expanded(
-                child: Text('Design Choice: ',style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Design Choice: ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -48,7 +63,14 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
             ]),
             Row(children: <Widget>[
               Expanded(
-                child: Text('Gender:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Gender:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -61,11 +83,25 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
             ]),
             Container(
               padding: EdgeInsets.only(top: 20.0, bottom: 10.0),
-              child:  Text('Dress', textAlign: TextAlign.center, style: TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),),),
-             Row(children: <Widget>[
-              
+              child: Text(
+                'Dress',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Row(children: <Widget>[
               Expanded(
-                child: Text('Shoulders:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Shoulders:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -77,9 +113,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Bodice:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Bodice:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -91,9 +133,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Waist:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Waist:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -105,52 +153,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Hips:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: '15',
+                child: Text(
+                  'Hips:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
-            ]),
-             Row(children: <Widget>[
-              
-              Expanded(
-                child: Text('Bust:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: '15',
-                  ),
-                ),
-              ),
-            ]),
-            Text('Skirt', textAlign: TextAlign.center, style: TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),),
-              Row(children: <Widget>[
-              
-              Expanded(
-                child: Text('Waist:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: '15',
-                  ),
-                ),
-              ),
-              ]),
-               Row(children: <Widget>[
-              
-              Expanded(
-                child: Text('Hips:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
               ),
               Expanded(
                 child: TextFormField(
@@ -162,9 +173,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Length:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Bust:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -175,25 +192,26 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                 ),
               ),
             ]),
-            Text('Shirt', textAlign: TextAlign.center, style: TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),),
-              Row(children: <Widget>[
-              
-              Expanded(
-                child: Text('Shoulders:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+            Container(
+              child: Text(
+                'Skirt',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
               ),
+            ),
+            Row(children: <Widget>[
               Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: '15',
+                child: Text(
+                  'Waist:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-              ),
-              ]),
-               Row(children: <Widget>[
-              
-              Expanded(
-                child: Text('Chest:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
               ),
               Expanded(
                 child: TextFormField(
@@ -205,9 +223,393 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
             Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Bodice:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Hips:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Container(
+              child: Text(
+                'Shirt',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Shoulders:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Chest:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Bodice:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Waist:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Sleeve Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Sleeve width:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Container(
+              child: Text(
+                'Trouser',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.purple,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold),
+              ),
+            ),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Waist:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Thighs:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Hips:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Knee Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Container(
+            child: Text(
+              'Shorts',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.purple,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Waist:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Hips:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Thighs:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Container(
+            child: Text(
+              'T-Shirts',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.purple,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Shoulders:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -219,9 +621,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
              Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Waist:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Sleeve Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -233,9 +641,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
              Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Sleeve Length:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Sleeve Width:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -247,9 +661,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
              Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Sleeve width:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Waist:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -260,11 +680,16 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                 ),
               ),
             ]),
-           Text('Trouser', textAlign: TextAlign.center, style: TextStyle(color: Colors.purple, fontSize: 25, fontWeight: FontWeight.bold),),
-              Row(children: <Widget>[
-              
+            Row(children: <Widget>[
               Expanded(
-                child: Text('Waist:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -274,11 +699,26 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                   ),
                 ),
               ),
-              ]),
-               Row(children: <Widget>[
-              
+            ]),
+            Container(
+            child: Text(
+              'Coats',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.purple,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
+            ),),
+            Row(children: <Widget>[
               Expanded(
-                child: Text('Thighs:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Shoulders:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -290,9 +730,15 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
               ),
             ]),
              Row(children: <Widget>[
-              
               Expanded(
-                child: Text('Hips:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
+                child: Text(
+                  'Sleeve Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Expanded(
                 child: TextFormField(
@@ -302,38 +748,131 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                   ),
                 ),
               ),
-              ]),
-               Row(children: <Widget>[
-              
-              Expanded(
-                child: Text('Knee Length:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: '15',
-                  ),
-                ),
-              ),
-              ]),
-               Row(children: <Widget>[
-              
-              Expanded(
-                child: Text('Length:  ', style: TextStyle(color: Colors.pink, fontSize: 20, fontWeight: FontWeight.bold,),),
-              ),
-              Expanded(
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    border: UnderlineInputBorder(),
-                    hintText: '15',
-                  ),
-                ),
-              ),
-              ]),
             ]),
-             ),
+             Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Sleeve Width:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
-              );
-         }
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+             Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Waist:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Hips:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Bust:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Bodice:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+            Row(children: <Widget>[
+              Expanded(
+                child: Text(
+                  'Length:  ',
+                  style: TextStyle(
+                    color: Colors.pink,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    border: UnderlineInputBorder(),
+                    hintText: '15',
+                  ),
+                ),
+              ),
+            ]),
+          ]),
+        ),
+      ),
+       ),
+    );
+  }
 }
