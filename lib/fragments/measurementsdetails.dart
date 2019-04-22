@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mshono_app/mixins/validationMixins.dart';
 
 class MeasurementDetails extends StatefulWidget {
   createState() {
@@ -6,8 +7,12 @@ class MeasurementDetails extends StatefulWidget {
   }
 }
 
-class MeasurementDetailsState extends State<MeasurementDetails> {
-  Widget build(context) {
+class MeasurementDetailsState extends State<MeasurementDetails> with ValidationMixin{
+ String name = '';
+ String designChoice = '';
+ String gender = '';
+ 
+Widget build(context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -43,6 +48,10 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                     border: UnderlineInputBorder(),
                     hintText: 'Please enter your name',
                   ),
+                  validator: validateName,
+                  onSaved: (String value){
+                    name= value;
+                  },
                 ),
               ),
             ]),
@@ -63,6 +72,10 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                     border: UnderlineInputBorder(),
                     hintText: 'Please enter your design choice',
                   ),
+                  validator: validateName,
+                  onSaved: (String value){
+                    designChoice = value;
+                  },
                 ),
               ),
             ]),
@@ -83,6 +96,10 @@ class MeasurementDetailsState extends State<MeasurementDetails> {
                     border: UnderlineInputBorder(),
                     hintText: 'Please enter your gender',
                   ),
+                  validator: validateName,
+                  onSaved: (String value){
+                    gender = value;
+                  },
                 ),
               ),
             ]),
