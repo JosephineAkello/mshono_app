@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mshono_app/mixins/validationMixins.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class MeasurementDetails extends StatefulWidget {
   createState() {
@@ -8,10 +9,15 @@ class MeasurementDetails extends StatefulWidget {
 }
 
 class MeasurementDetailsState extends State<MeasurementDetails> with ValidationMixin{
+ final formKey = GlobalKey<FormState>();
+final DatabaseReference database = FirebaseDatabase.instance.reference().child("Users");
+
  String name = '';
  String designChoice = '';
  String gender = '';
  
+ 
+
 Widget build(context) {
     return Scaffold(
       appBar: AppBar(
