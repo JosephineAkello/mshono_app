@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mshono_app/mixins/validationMixins.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class MeasurementDetails extends StatefulWidget {
   createState() {
@@ -15,7 +16,21 @@ final DatabaseReference database = FirebaseDatabase.instance.reference().child("
  String name = '';
  String designChoice = '';
  String gender = '';
+ dynamic currentUser = '';
  
+ submit() async{
+   final FormState form = formKey.currentState;
+   if(form.validate()){
+     form.save();
+     currentUser = await FirebaseAuth.instance.currentUser();
+   database.push().set({
+      'name': name,
+      'designChoice': designChoice,
+      'gender' : gender,
+      'nok': currentUser.uid,
+   });
+   }
+ }
  
 
 Widget build(context) {
